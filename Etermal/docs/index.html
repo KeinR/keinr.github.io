@@ -94,14 +94,15 @@ CPU</h2>
 <h2><a class="anchor" id="performance_memory"></a>
 Memory</h2>
 <p>There is a glyph cache that is used when rendering text (cleared when the screen is cleared via <a class="el" href="classetm_1_1_terminal.html#a73521a27d22baae969dca09be96f3676">Terminal::clear()</a>), but it's really quite small.</p>
-<p>While it's implementation defined, the terminal takes up ~1.5 KB, whereas the entire program seems to take up What you should note is the usage from the line count, which no my machine ~25 bytes plus however much the strings allocate.</p>
+<p>While it's implementation defined, the terminal takes up ~1.5 KB, making it rather stack-heavy. Should probably dynamically allocate.</p>
+<p>What you should note is the usage from the line count, which no my machine ~25 bytes plus however much the strings allocate.</p>
 <p>In investigating, I've found that it takes on its own no more than like 1MB, although I really have no idea because it's a little hard to measure.</p>
 <p>TL;DR: Set the max line count to 500-1000 and you'll be <b>fine</b>. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jul 26 2020 18:05:11 for Etermal by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jul 27 2020 11:29:06 for Etermal by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.18
 </small></address>
