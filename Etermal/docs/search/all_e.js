@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['render_68',['render',['../classetm_1_1_terminal.html#a047512fc8f05088e8446e4ec76e7c8d5',1,'etm::Terminal']]],
-  ['requestinput_69',['requestInput',['../classetm_1_1_e_terminal.html#a0e3d83f2c0973d2adc690e89f2b4177d',1,'etm::ETerminal::requestInput()'],['../classetm_1_1_terminal.html#a4226dbef10ca43b04637d984654208e0',1,'etm::Terminal::requestInput()']]]
+  ['pbackfail_78',['pbackfail',['../classetm_1_1_terminal.html#a5393827109644dbb52ecf86decb72449',1,'etm::Terminal']]],
+  ['posterror_79',['postError',['../classetm_1_1_terminal.html#af6fa2be4134e387bccbd468baf0c1dfb',1,'etm::Terminal::postError()'],['../classetm_1_1_shell.html#a92211beef0fd07ad4cf4d720fd5da1ff',1,'etm::Shell::postError()']]]
 ];

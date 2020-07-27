@@ -69,6 +69,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classetm_1_1_terminal-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">etm::Terminal Class Reference</div>  </div>
@@ -100,18 +101,37 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9da9a449329a09ac35448990ab24e392"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_terminal.html#a9da9a449329a09ac35448990ab24e392">Terminal</a> ()</td></tr>
-<tr class="memdesc:a9da9a449329a09ac35448990ab24e392"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classetm_1_1_terminal.html" title="Build-in implementation of the ETerminal frontend.">Terminal</a>.  <a href="classetm_1_1_terminal.html#a9da9a449329a09ac35448990ab24e392">More...</a><br /></td></tr>
-<tr class="separator:a9da9a449329a09ac35448990ab24e392"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd3ee4f2deb0ae5ea453f63943845c06"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_terminal.html#acd3ee4f2deb0ae5ea453f63943845c06">Terminal</a> (const <a class="el" href="classetm_1_1_terminal.html#abb286411d08d768f83ecbfb3e61ed762">errCallback_t</a> &amp;errorCallback)</td></tr>
-<tr class="memdesc:acd3ee4f2deb0ae5ea453f63943845c06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classetm_1_1_terminal.html" title="Build-in implementation of the ETerminal frontend.">Terminal</a> with a custom error callback.  <a href="classetm_1_1_terminal.html#acd3ee4f2deb0ae5ea453f63943845c06">More...</a><br /></td></tr>
-<tr class="separator:acd3ee4f2deb0ae5ea453f63943845c06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04329449e49ba791993156e4dbb7e276"><td class="memItemLeft" align="right" valign="top"><a id="a04329449e49ba791993156e4dbb7e276"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Terminal</b> (<a class="el" href="classetm_1_1_terminal.html">Terminal</a> &amp;&amp;other)=delete</td></tr>
-<tr class="separator:a04329449e49ba791993156e4dbb7e276"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab60e403c1e0ca205f614add29da9b5ca"><td class="memItemLeft" align="right" valign="top"><a id="ab60e403c1e0ca205f614add29da9b5ca"></a>
-<a class="el" href="classetm_1_1_terminal.html">Terminal</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classetm_1_1_terminal.html">Terminal</a> &amp;&amp;other)=delete</td></tr>
-<tr class="separator:ab60e403c1e0ca205f614add29da9b5ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae75ba6ca7bca2cf9ae7947c657c41f37"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_terminal.html#ae75ba6ca7bca2cf9ae7947c657c41f37">Terminal</a> (const std::string &amp;fontPath=&quot;C:\\Windows\\Fonts\\lucon.ttf&quot;, bool postponeInit=false)</td></tr>
+<tr class="memdesc:ae75ba6ca7bca2cf9ae7947c657c41f37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classetm_1_1_terminal.html" title="Build-in implementation of the ETerminal frontend.">Terminal</a>.  <a href="classetm_1_1_terminal.html#ae75ba6ca7bca2cf9ae7947c657c41f37">More...</a><br /></td></tr>
+<tr class="separator:ae75ba6ca7bca2cf9ae7947c657c41f37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af48c7f18b11ebb72ef9cf786231ae2b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_terminal.html#af48c7f18b11ebb72ef9cf786231ae2b3">Terminal</a> (const <a class="el" href="classetm_1_1_terminal.html#abb286411d08d768f83ecbfb3e61ed762">errCallback_t</a> &amp;errorCallback, const std::string &amp;fontPath=&quot;C:\\Windows\\Fonts\\lucon.ttf&quot;, bool postponeInit=false)</td></tr>
+<tr class="memdesc:af48c7f18b11ebb72ef9cf786231ae2b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="classetm_1_1_terminal.html" title="Build-in implementation of the ETerminal frontend.">Terminal</a> with a custom error callback.  <a href="classetm_1_1_terminal.html#af48c7f18b11ebb72ef9cf786231ae2b3">More...</a><br /></td></tr>
+<tr class="separator:af48c7f18b11ebb72ef9cf786231ae2b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a534adaa00b3ecb962a88f34bb04fc95e"><td class="memItemLeft" align="right" valign="top"><a id="a534adaa00b3ecb962a88f34bb04fc95e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_terminal.html#a534adaa00b3ecb962a88f34bb04fc95e">~Terminal</a> ()</td></tr>
+<tr class="memdesc:a534adaa00b3ecb962a88f34bb04fc95e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destucts the terminal. <br /></td></tr>
+<tr class="separator:a534adaa00b3ecb962a88f34bb04fc95e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6260478ae0c7d0247abafdc19b9192a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_terminal.html#ab6260478ae0c7d0247abafdc19b9192a">Terminal</a> (<a class="el" href="classetm_1_1_terminal.html">Terminal</a> &amp;&amp;other)</td></tr>
+<tr class="memdesc:ab6260478ae0c7d0247abafdc19b9192a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize with moved object.  <a href="classetm_1_1_terminal.html#ab6260478ae0c7d0247abafdc19b9192a">More...</a><br /></td></tr>
+<tr class="separator:ab6260478ae0c7d0247abafdc19b9192a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3b5a762dd287754895caf259cde4170"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classetm_1_1_terminal.html">Terminal</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_terminal.html#ad3b5a762dd287754895caf259cde4170">operator=</a> (<a class="el" href="classetm_1_1_terminal.html">Terminal</a> &amp;&amp;other)</td></tr>
+<tr class="memdesc:ad3b5a762dd287754895caf259cde4170"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set to moved object.  <a href="classetm_1_1_terminal.html#ad3b5a762dd287754895caf259cde4170">More...</a><br /></td></tr>
+<tr class="separator:ad3b5a762dd287754895caf259cde4170"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3864a4c9b766383edc7ec501abaa87a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_terminal.html#a3864a4c9b766383edc7ec501abaa87a4">init</a> ()</td></tr>
+<tr class="memdesc:a3864a4c9b766383edc7ec501abaa87a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the terminal's openGL context resources.  <a href="classetm_1_1_terminal.html#a3864a4c9b766383edc7ec501abaa87a4">More...</a><br /></td></tr>
+<tr class="separator:a3864a4c9b766383edc7ec501abaa87a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a849fe7ad732c8ce070b5f6664e326c94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_terminal.html#a849fe7ad732c8ce070b5f6664e326c94">deInit</a> ()</td></tr>
+<tr class="memdesc:a849fe7ad732c8ce070b5f6664e326c94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Free the terminal's openGL context resources.  <a href="classetm_1_1_terminal.html#a849fe7ad732c8ce070b5f6664e326c94">More...</a><br /></td></tr>
+<tr class="separator:a849fe7ad732c8ce070b5f6664e326c94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b20e7ddc34788214fe6ddbd3cbb58b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_terminal.html#a9b20e7ddc34788214fe6ddbd3cbb58b4">changeFont</a> (const std::string &amp;fontPath)</td></tr>
+<tr class="memdesc:a9b20e7ddc34788214fe6ddbd3cbb58b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the in-use font.  <a href="classetm_1_1_terminal.html#a9b20e7ddc34788214fe6ddbd3cbb58b4">More...</a><br /></td></tr>
+<tr class="separator:a9b20e7ddc34788214fe6ddbd3cbb58b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a861be587be55e1b9c9ad54b11bb3ffbf"><td class="memItemLeft" align="right" valign="top"><a id="a861be587be55e1b9c9ad54b11bb3ffbf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>invalidate</b> ()</td></tr>
+<tr class="separator:a861be587be55e1b9c9ad54b11bb3ffbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e13b6bd00dace6bdd3021defbd3f76c"><td class="memItemLeft" align="right" valign="top"><a id="a5e13b6bd00dace6bdd3021defbd3f76c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>notifyScroll</b> ()</td></tr>
+<tr class="separator:a5e13b6bd00dace6bdd3021defbd3f76c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6fa2be4134e387bccbd468baf0c1dfb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_terminal.html#af6fa2be4134e387bccbd468baf0c1dfb">postError</a> (const termError &amp;error)</td></tr>
 <tr class="memdesc:af6fa2be4134e387bccbd468baf0c1dfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pass an error to the current error callback.  <a href="classetm_1_1_terminal.html#af6fa2be4134e387bccbd468baf0c1dfb">More...</a><br /></td></tr>
 <tr class="separator:af6fa2be4134e387bccbd468baf0c1dfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,6 +159,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a13c558791bbcef45e503d661cd1aab4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_terminal.html#a13c558791bbcef45e503d661cd1aab4c">setScrollSensitivity</a> (float value)</td></tr>
 <tr class="memdesc:a13c558791bbcef45e503d661cd1aab4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the mouse scroll sensitivity.  <a href="classetm_1_1_terminal.html#a13c558791bbcef45e503d661cd1aab4c">More...</a><br /></td></tr>
 <tr class="separator:a13c558791bbcef45e503d661cd1aab4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86b6855d9b2f4bb9cf46f9349ca2f0bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_terminal.html#a86b6855d9b2f4bb9cf46f9349ca2f0bf">setScrollCooldown</a> (int millis)</td></tr>
+<tr class="memdesc:a86b6855d9b2f4bb9cf46f9349ca2f0bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time between scrolls when holding down the scrollbar arrow.  <a href="classetm_1_1_terminal.html#a86b6855d9b2f4bb9cf46f9349ca2f0bf">More...</a><br /></td></tr>
+<tr class="separator:a86b6855d9b2f4bb9cf46f9349ca2f0bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a38ee6ca7e70fd49903252f80607048"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_terminal.html#a0a38ee6ca7e70fd49903252f80607048">setScrollWait</a> (int millis)</td></tr>
+<tr class="memdesc:a0a38ee6ca7e70fd49903252f80607048"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time to wait until doing scroll repeat from when user first presses scroll button.  <a href="classetm_1_1_terminal.html#a0a38ee6ca7e70fd49903252f80607048">More...</a><br /></td></tr>
+<tr class="separator:a0a38ee6ca7e70fd49903252f80607048"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67a7ff31b1ae7bbd091a2bddef1272c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_terminal.html#a67a7ff31b1ae7bbd091a2bddef1272c8">setShell</a> (<a class="el" href="classetm_1_1_e_shell.html">EShell</a> &amp;shell)</td></tr>
 <tr class="memdesc:a67a7ff31b1ae7bbd091a2bddef1272c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the shell to which user input should be directed.  <a href="classetm_1_1_terminal.html#a67a7ff31b1ae7bbd091a2bddef1272c8">More...</a><br /></td></tr>
 <tr class="separator:a67a7ff31b1ae7bbd091a2bddef1272c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -221,6 +247,37 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:ade121e7917112973d3ace856ab7d3de5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_terminal.html#ade121e7917112973d3ace856ab7d3de5">getTextSelection</a> ()</td></tr>
 <tr class="memdesc:ade121e7917112973d3ace856ab7d3de5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the text highlighted by the user.  <a href="classetm_1_1_terminal.html#ade121e7917112973d3ace856ab7d3de5">More...</a><br /></td></tr>
 <tr class="separator:ade121e7917112973d3ace856ab7d3de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53680f9836826b9478c709db01c62cce"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_terminal.html#a53680f9836826b9478c709db01c62cce">getText</a> ()</td></tr>
+<tr class="memdesc:a53680f9836826b9478c709db01c62cce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets all the text in the terminal.  <a href="classetm_1_1_terminal.html#a53680f9836826b9478c709db01c62cce">More...</a><br /></td></tr>
+<tr class="separator:a53680f9836826b9478c709db01c62cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a0f08a5ec57513d2364238a333867b81b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_terminal.html#a0f08a5ec57513d2364238a333867b81b">sync</a> () override</td></tr>
+<tr class="memdesc:a0f08a5ec57513d2364238a333867b81b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls <a class="el" href="classetm_1_1_terminal.html#a060ae1b193c8b75061d0883d68dde2df">flush()</a>.  <a href="classetm_1_1_terminal.html#a0f08a5ec57513d2364238a333867b81b">More...</a><br /></td></tr>
+<tr class="separator:a0f08a5ec57513d2364238a333867b81b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a272d582a17db93b57853f9d0ba42e8ea"><td class="memItemLeft" align="right" valign="top">std::streamsize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_terminal.html#a272d582a17db93b57853f9d0ba42e8ea">showmanyc</a> () override</td></tr>
+<tr class="memdesc:a272d582a17db93b57853f9d0ba42e8ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the displayBuffer.  <a href="classetm_1_1_terminal.html#a272d582a17db93b57853f9d0ba42e8ea">More...</a><br /></td></tr>
+<tr class="separator:a272d582a17db93b57853f9d0ba42e8ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71522bf83949bc9acd8f6dcb97bb1886"><td class="memItemLeft" align="right" valign="top">std::streamsize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_terminal.html#a71522bf83949bc9acd8f6dcb97bb1886">xsgetn</a> (char *c, std::streamsize n) override</td></tr>
+<tr class="memdesc:a71522bf83949bc9acd8f6dcb97bb1886"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts characters from the start of the displayBuffer.  <a href="classetm_1_1_terminal.html#a71522bf83949bc9acd8f6dcb97bb1886">More...</a><br /></td></tr>
+<tr class="separator:a71522bf83949bc9acd8f6dcb97bb1886"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1998f974c4057b4f1317796688992023"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_terminal.html#a1998f974c4057b4f1317796688992023">underflow</a> () override</td></tr>
+<tr class="memdesc:a1998f974c4057b4f1317796688992023"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the first character in the displayBuffer.  <a href="classetm_1_1_terminal.html#a1998f974c4057b4f1317796688992023">More...</a><br /></td></tr>
+<tr class="separator:a1998f974c4057b4f1317796688992023"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96c5533d0e169488de82f56f5f6d9321"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_terminal.html#a96c5533d0e169488de82f56f5f6d9321">uflow</a> () override</td></tr>
+<tr class="memdesc:a96c5533d0e169488de82f56f5f6d9321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract the first character in the displayBuffer.  <a href="classetm_1_1_terminal.html#a96c5533d0e169488de82f56f5f6d9321">More...</a><br /></td></tr>
+<tr class="separator:a96c5533d0e169488de82f56f5f6d9321"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5393827109644dbb52ecf86decb72449"><td class="memItemLeft" align="right" valign="top"><a id="a5393827109644dbb52ecf86decb72449"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_terminal.html#a5393827109644dbb52ecf86decb72449">pbackfail</a> (int c=EOF) override</td></tr>
+<tr class="memdesc:a5393827109644dbb52ecf86decb72449"><td class="mdescLeft">&#160;</td><td class="mdescRight">Put back a char. <br /></td></tr>
+<tr class="separator:a5393827109644dbb52ecf86decb72449"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fc42026f77f75a3908da09d571540fd"><td class="memItemLeft" align="right" valign="top">std::streamsize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_terminal.html#a6fc42026f77f75a3908da09d571540fd">xsputn</a> (const char *s, std::streamsize n) override</td></tr>
+<tr class="memdesc:a6fc42026f77f75a3908da09d571540fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input chars.  <a href="classetm_1_1_terminal.html#a6fc42026f77f75a3908da09d571540fd">More...</a><br /></td></tr>
+<tr class="separator:a6fc42026f77f75a3908da09d571540fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6c66072c0b065c6cd1f33b08292c564"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_terminal.html#aa6c66072c0b065c6cd1f33b08292c564">overflow</a> (int c=EOF) override</td></tr>
+<tr class="memdesc:aa6c66072c0b065c6cd1f33b08292c564"><td class="mdescLeft">&#160;</td><td class="mdescRight">Input a char.  <a href="classetm_1_1_terminal.html#aa6c66072c0b065c6cd1f33b08292c564">More...</a><br /></td></tr>
+<tr class="separator:aa6c66072c0b065c6cd1f33b08292c564"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Build-in implementation of the <a class="el" href="classetm_1_1_e_terminal.html">ETerminal</a> frontend. </p>
@@ -265,8 +322,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a9da9a449329a09ac35448990ab24e392"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9da9a449329a09ac35448990ab24e392">&#9670;&nbsp;</a></span>Terminal() <span class="overload">[1/2]</span></h2>
+<a id="ae75ba6ca7bca2cf9ae7947c657c41f37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae75ba6ca7bca2cf9ae7947c657c41f37">&#9670;&nbsp;</a></span>Terminal() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -274,8 +331,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
         <tr>
           <td class="memname">etm::Terminal::Terminal </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>fontPath</em> = <code>&quot;C:\\Windows\\Fonts\\lucon.ttf&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>postponeInit</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -283,12 +351,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <p>Creates a <a class="el" href="classetm_1_1_terminal.html" title="Build-in implementation of the ETerminal frontend.">Terminal</a>. </p>
 <dl class="section note"><dt>Note</dt><dd>If an error occurred during initialization, the default callback will be called. </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>The terminal will be tied to the current OpenGL context. </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Late initialization </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fontPath</td><td>Path of the initial font </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">postponeInit</td><td>If this is set to <code>true</code>, the terminal <em>WILL</em> <em>NOT</em> initialize it's OpenGL resources right away, allowing you to later on generate the resources in the context you want to render to terminal to. NOTE WELL that you must call <a class="el" href="classetm_1_1_terminal.html#a3864a4c9b766383edc7ec501abaa87a4">init()</a> before you do any rendering. If set to <code>false</code>, you can still call <a class="el" href="classetm_1_1_terminal.html#a3864a4c9b766383edc7ec501abaa87a4">init()</a> later on when your desired context is bound, however bad things will happen if an OpenGL context isn't active. The bottom line is: if the context you want to render to is current, keep it at <code>false</code>. Otherwise, set it to <code>true</code> and call <a class="el" href="classetm_1_1_terminal.html#a3864a4c9b766383edc7ec501abaa87a4">init()</a> later on. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="acd3ee4f2deb0ae5ea453f63943845c06"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd3ee4f2deb0ae5ea453f63943845c06">&#9670;&nbsp;</a></span>Terminal() <span class="overload">[2/2]</span></h2>
+<a id="af48c7f18b11ebb72ef9cf786231ae2b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af48c7f18b11ebb72ef9cf786231ae2b3">&#9670;&nbsp;</a></span>Terminal() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -297,8 +371,24 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
           <td class="memname">etm::Terminal::Terminal </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classetm_1_1_terminal.html#abb286411d08d768f83ecbfb3e61ed762">errCallback_t</a> &amp;&#160;</td>
-          <td class="paramname"><em>errorCallback</em></td><td>)</td>
+          <td class="paramname"><em>errorCallback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>fontPath</em> = <code>&quot;C:\\Windows\\Fonts\\lucon.ttf&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>postponeInit</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -308,11 +398,39 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">errorCallback</td><td>The error callback </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fontPath</td><td>Path of the initial font </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">postponeInit</td><td>If this is set to <code>true</code>, the terminal <em>WILL</em> <em>NOT</em> initialize it's OpenGL resources right away, allowing you to later on generate the resources in the context you want to render to terminal to. NOTE WELL that you must call <a class="el" href="classetm_1_1_terminal.html#a3864a4c9b766383edc7ec501abaa87a4">init()</a> before you do any rendering. If set to <code>false</code>, you can still call <a class="el" href="classetm_1_1_terminal.html#a3864a4c9b766383edc7ec501abaa87a4">init()</a> later on when your desired context is bound, however bad things will happen if an OpenGL context isn't active. The bottom line is: if the context you want to render to is current, keep it at <code>false</code>. Otherwise, set it to <code>true</code> and call <a class="el" href="classetm_1_1_terminal.html#a3864a4c9b766383edc7ec501abaa87a4">init()</a> later on. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Late initialization </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Late initialization </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classetm_1_1_terminal.html#a44786714b0109d81ac97ae8772db367c" title="Sets the global error callback for this Terminal.">setErrorCallback(const errCallback_t &amp;callback)</a> </dd></dl>
+
+</div>
+</div>
+<a id="ab6260478ae0c7d0247abafdc19b9192a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6260478ae0c7d0247abafdc19b9192a">&#9670;&nbsp;</a></span>Terminal() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">etm::Terminal::Terminal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classetm_1_1_terminal.html">Terminal</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize with moved object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">The</td><td>object to move </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -351,6 +469,32 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classetm_1_1_terminal.html#a4226dbef10ca43b04637d984654208e0" title="Each call adds callback to the input queue.">requestInput(TermInput &amp;callback)</a> </dd></dl>
 
 <p>Implements <a class="el" href="classetm_1_1_e_terminal.html#a03d38bf2a070c1867be653bd9ac8865e">etm::ETerminal</a>.</p>
+
+</div>
+</div>
+<a id="a9b20e7ddc34788214fe6ddbd3cbb58b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b20e7ddc34788214fe6ddbd3cbb58b4">&#9670;&nbsp;</a></span>changeFont()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void etm::Terminal::changeFont </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>fontPath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Changes the in-use font. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fontPath</td><td>Path to the font </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -416,6 +560,26 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="classetm_1_1_terminal.html#a4c4f551e238943f66cd0db3632b2da68" title="Removes all instances of a callback from the input queue.">cancelInputRequest(TermInput *callback)</a> </dd></dl>
 
 <p>Implements <a class="el" href="classetm_1_1_e_terminal.html#a259c480aee99990b4002805c8f7be07b">etm::ETerminal</a>.</p>
+
+</div>
+</div>
+<a id="a849fe7ad732c8ce070b5f6664e326c94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a849fe7ad732c8ce070b5f6664e326c94">&#9670;&nbsp;</a></span>deInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void etm::Terminal::deInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Free the terminal's openGL context resources. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Must not render until <a class="el" href="classetm_1_1_terminal.html#a3864a4c9b766383edc7ec501abaa87a4">init()</a> is called again! </dd></dl>
 
 </div>
 </div>
@@ -486,6 +650,26 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
+<a id="a53680f9836826b9478c709db01c62cce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53680f9836826b9478c709db01c62cce">&#9670;&nbsp;</a></span>getText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string etm::Terminal::getText </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets all the text in the terminal. </p>
+<dl class="section return"><dt>Returns</dt><dd>The text in the terminal </dd></dl>
+
+</div>
+</div>
 <a id="ade121e7917112973d3ace856ab7d3de5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ade121e7917112973d3ace856ab7d3de5">&#9670;&nbsp;</a></span>getTextSelection()</h2>
 
@@ -504,6 +688,27 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <p>Gets the text highlighted by the user. </p>
 <p>Highlight is determined by where the user clicking and dragging.</p>
 <p>This is useful for copy/paste operations - which is exectly what this fuction was made for. </p><dl class="section return"><dt>Returns</dt><dd>UTF-8 encoded string </dd></dl>
+
+</div>
+</div>
+<a id="a3864a4c9b766383edc7ec501abaa87a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3864a4c9b766383edc7ec501abaa87a4">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void etm::Terminal::init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the terminal's openGL context resources. </p>
+<dl class="section note"><dt>Note</dt><dd>This will generate a bunch of stuff, only call when you need to bind the terminal to a context. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>The terminal will be tied to the current OpenGL context! </dd></dl>
 
 </div>
 </div>
@@ -771,6 +976,68 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <dl class="section note"><dt>Note</dt><dd>Used soley by you (the user) to determine if the terminal should recieve input. </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the terminal is focused. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classetm_1_1_terminal.html#a2e6870ef46c270fb290c6cf83174fe15" title="Sets whether the terminal is focused or not.">setFocused(bool val)</a> </dd></dl>
+
+</div>
+</div>
+<a id="ad3b5a762dd287754895caf259cde4170"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3b5a762dd287754895caf259cde4170">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classetm_1_1_terminal.html">Terminal</a>&amp; etm::Terminal::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classetm_1_1_terminal.html">Terminal</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set to moved object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">The</td><td>object to move </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>*this</code> </dd></dl>
+
+</div>
+</div>
+<a id="aa6c66072c0b065c6cd1f33b08292c564"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6c66072c0b065c6cd1f33b08292c564">&#9670;&nbsp;</a></span>overflow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int etm::Terminal::overflow </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>c</em> = <code>EOF</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Input a char. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>The char. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The char </dd></dl>
 
 </div>
 </div>
@@ -1180,6 +1447,32 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
+<a id="a86b6855d9b2f4bb9cf46f9349ca2f0bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86b6855d9b2f4bb9cf46f9349ca2f0bf">&#9670;&nbsp;</a></span>setScrollCooldown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void etm::Terminal::setScrollCooldown </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>millis</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Time between scrolls when holding down the scrollbar arrow. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">millis</td><td>Time in milliseconds </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a13c558791bbcef45e503d661cd1aab4c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a13c558791bbcef45e503d661cd1aab4c">&#9670;&nbsp;</a></span>setScrollSensitivity()</h2>
 
@@ -1201,6 +1494,32 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>The sensitivity </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0a38ee6ca7e70fd49903252f80607048"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a38ee6ca7e70fd49903252f80607048">&#9670;&nbsp;</a></span>setScrollWait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void etm::Terminal::setScrollWait </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>millis</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Time to wait until doing scroll repeat from when user first presses scroll button. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">millis</td><td>Time in milliseconds </td></tr>
   </table>
   </dd>
 </dl>
@@ -1384,13 +1703,217 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
+<a id="a272d582a17db93b57853f9d0ba42e8ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a272d582a17db93b57853f9d0ba42e8ea">&#9670;&nbsp;</a></span>showmanyc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::streamsize etm::Terminal::showmanyc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the size of the displayBuffer. </p>
+<dl class="section return"><dt>Returns</dt><dd>The char count </dd></dl>
+
+</div>
+</div>
+<a id="a0f08a5ec57513d2364238a333867b81b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f08a5ec57513d2364238a333867b81b">&#9670;&nbsp;</a></span>sync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int etm::Terminal::sync </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calls <a class="el" href="classetm_1_1_terminal.html#a060ae1b193c8b75061d0883d68dde2df">flush()</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>0 </dd></dl>
+
+</div>
+</div>
+<a id="a96c5533d0e169488de82f56f5f6d9321"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96c5533d0e169488de82f56f5f6d9321">&#9670;&nbsp;</a></span>uflow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int etm::Terminal::uflow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Extract the first character in the displayBuffer. </p>
+<dl class="section return"><dt>Returns</dt><dd>The character </dd></dl>
+
+</div>
+</div>
+<a id="a1998f974c4057b4f1317796688992023"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1998f974c4057b4f1317796688992023">&#9670;&nbsp;</a></span>underflow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int etm::Terminal::underflow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the first character in the displayBuffer. </p>
+<dl class="section return"><dt>Returns</dt><dd>The character </dd></dl>
+
+</div>
+</div>
+<a id="a71522bf83949bc9acd8f6dcb97bb1886"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71522bf83949bc9acd8f6dcb97bb1886">&#9670;&nbsp;</a></span>xsgetn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::streamsize etm::Terminal::xsgetn </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::streamsize&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Extracts characters from the start of the displayBuffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">c</td><td>The output string </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Size of the output string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of chars put </dd></dl>
+
+</div>
+</div>
+<a id="a6fc42026f77f75a3908da09d571540fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fc42026f77f75a3908da09d571540fd">&#9670;&nbsp;</a></span>xsputn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::streamsize etm::Terminal::xsputn </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::streamsize&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Input chars. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>The data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Length of data </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Length of data put </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_terminal_8h_source.html">Terminal.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 22 2020 15:46:04 for Etermal by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 26 2020 18:05:11 for Etermal by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.18
 </small></address>

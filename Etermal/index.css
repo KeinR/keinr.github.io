@@ -4,3 +4,10 @@
     font-family: monospace;
     font-weight: lighter;
 }
+
+.out {
+    background-color: yellowgreen;
+    color: black;
+    font-family: monospace;
+    font-weight: lighter;
+}

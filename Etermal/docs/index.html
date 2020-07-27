@@ -66,12 +66,42 @@ $(function() {
 <div class="title">Etermal Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Etermal docs </p>
+<div class="toc"><h3>Table of Contents</h3>
+<ul><li class="level1"><a href="#what_is_it">What is it?</a></li>
+<li class="level1"><a href="#getting_started_main">Getting started</a></li>
+<li class="level1"><a href="#structure">Structure</a></li>
+<li class="level1"><a href="#performance">Performance</a><ul><li class="level2"><a href="#performance_cpu">CPU</a></li>
+<li class="level2"><a href="#performance_memory">Memory</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="textblock"><h1><a class="anchor" id="what_is_it"></a>
+What is it?</h1>
+<p>Etermal is an embedabble terminal (and shell) for OpenGL 3.3, although it might work for later versions.</p>
+<h1><a class="anchor" id="getting_started_main"></a>
+Getting started</h1>
+<p>See <a class="el" href="getting_started.html">this page</a>.</p>
+<h1><a class="anchor" id="structure"></a>
+Structure</h1>
+<p>The library is divided into the frontend and backend, being the terminal and shell respectively. The shell takes care of command processing, and the terminal handles the displaying of text and user input.</p>
+<p>The front and back-end are abstracted so that you can easially swap in your own implementation, with <a class="el" href="classetm_1_1_e_terminal.html">ETerminal</a> and <a class="el" href="classetm_1_1_e_shell.html">EShell</a>.</p>
+<h1><a class="anchor" id="performance"></a>
+Performance</h1>
+<h2><a class="anchor" id="performance_cpu"></a>
+CPU</h2>
+<p>Pretty good. The benchmarks from <a href="https://github.com/KeinR/Etermal/blob/master/tests/main.cpp#L133">here</a> claim that on my dinky laptop the FPS ranges from 2000 to infinity... Long story short, it shouldn't be an issue.</p>
+<h2><a class="anchor" id="performance_memory"></a>
+Memory</h2>
+<p>There is a glyph cache that is used when rendering text (cleared when the screen is cleared via <a class="el" href="classetm_1_1_terminal.html#a73521a27d22baae969dca09be96f3676">Terminal::clear()</a>), but it's really quite small.</p>
+<p>While it's implementation defined, the terminal takes up ~1.5 KB, whereas the entire program seems to take up What you should note is the usage from the line count, which no my machine ~25 bytes plus however much the strings allocate.</p>
+<p>In investigating, I've found that it takes on its own no more than like 1MB, although I really have no idea because it's a little hard to measure.</p>
+<p>TL;DR: Set the max line count to 500-1000 and you'll be <b>fine</b>. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 22 2020 15:46:04 for Etermal by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 26 2020 18:05:11 for Etermal by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.18
 </small></address>

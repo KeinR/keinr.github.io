@@ -99,6 +99,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad4aa4e3583bf02a9bb28702ad14e20f0"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_arg_filter_1_1_error_handle.html#ad4aa4e3583bf02a9bb28702ad14e20f0">badFlag</a> (int position, const std::string &amp;badFlag)=0</td></tr>
 <tr class="memdesc:ad4aa4e3583bf02a9bb28702ad14e20f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the given flag does not exist.  <a href="classetm_1_1_arg_filter_1_1_error_handle.html#ad4aa4e3583bf02a9bb28702ad14e20f0">More...</a><br /></td></tr>
 <tr class="separator:ad4aa4e3583bf02a9bb28702ad14e20f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35e1ddb64dcfdf2ea077cbcdfd5936f8"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_arg_filter_1_1_error_handle.html#a35e1ddb64dcfdf2ea077cbcdfd5936f8">tooManyArgs</a> (int position, unsigned int max)=0</td></tr>
+<tr class="memdesc:a35e1ddb64dcfdf2ea077cbcdfd5936f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when there are too many array arguments.  <a href="classetm_1_1_arg_filter_1_1_error_handle.html#a35e1ddb64dcfdf2ea077cbcdfd5936f8">More...</a><br /></td></tr>
+<tr class="separator:a35e1ddb64dcfdf2ea077cbcdfd5936f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ec792cb0bc233b9201543c448917583"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_arg_filter_1_1_error_handle.html#a3ec792cb0bc233b9201543c448917583">internalError</a> (int position, const std::string &amp;errMsg)=0</td></tr>
 <tr class="memdesc:a3ec792cb0bc233b9201543c448917583"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when some internal error occurred.  <a href="classetm_1_1_arg_filter_1_1_error_handle.html#a3ec792cb0bc233b9201543c448917583">More...</a><br /></td></tr>
 <tr class="separator:a3ec792cb0bc233b9201543c448917583"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -381,13 +384,61 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a35e1ddb64dcfdf2ea077cbcdfd5936f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35e1ddb64dcfdf2ea077cbcdfd5936f8">&#9670;&nbsp;</a></span>tooManyArgs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string etm::ArgFilter::ErrorHandle::tooManyArgs </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>max</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called when there are too many array arguments. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">position</td><td>The argument position (with 0 being the invokation) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">int</td><td>The max allowed args </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>String to display to the user </dd></dl>
+
+<p>Implemented in <a class="el" href="classetm_1_1_arg_filter_1_1_default_error_handle.html#a59fe065bd74c406a9026c086fd1b1b7e">etm::ArgFilter::DefaultErrorHandle</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_arg_filter_8h_source.html">ArgFilter.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 22 2020 15:46:03 for Etermal by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 26 2020 18:05:10 for Etermal by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.18
 </small></address>

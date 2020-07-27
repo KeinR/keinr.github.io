@@ -76,40 +76,44 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;data/ArgData.h&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>etm {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classetm_1_1_args.html">   18</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classetm_1_1_args.html">Args</a> {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">typedef</span> std::shared_ptr&lt;ArgData&gt; data_t;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">typedef</span> std::map&lt;std::string, data_t&gt; container_t;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        container_t args;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        std::string call;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classetm_1_1_args.html#ae6f24990c47c7dbd72373134a775912a">   33</a></span>&#160;        <a class="code" href="classetm_1_1_args.html#ae6f24990c47c7dbd72373134a775912a">Args</a>();</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classetm_1_1_args.html#aa5cd529e3d3a7ec414b7efa9571d240e">   43</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classetm_1_1_args.html#aa5cd529e3d3a7ec414b7efa9571d240e">pushArg</a>(<span class="keyword">const</span> std::string &amp;name, <span class="keyword">const</span> data_t &amp;data);</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classetm_1_1_args.html#a09502a444ee39eddc8671015b17ae84c">   50</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classetm_1_1_args.html#a09502a444ee39eddc8671015b17ae84c">setCall</a>(<span class="keyword">const</span> std::string &amp;str);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classetm_1_1_args.html#a039458d14b5fb52303f786fdee035c1a">   57</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classetm_1_1_args.html#a039458d14b5fb52303f786fdee035c1a">has</a>(<span class="keyword">const</span> std::string &amp;name);</div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classetm_1_1_args.html#ae3b561a666ce356cd2b2da9b5b22d700">   65</a></span>&#160;        data_t <a class="code" href="classetm_1_1_args.html#ae3b561a666ce356cd2b2da9b5b22d700">get</a>(<span class="keyword">const</span> std::string &amp;name);</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classetm_1_1_args.html#af40a2f6dcdb04fd7efb5f07d618fc89a">   70</a></span>&#160;        std::string &amp;<a class="code" href="classetm_1_1_args.html#af40a2f6dcdb04fd7efb5f07d618fc89a">getCall</a>();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    };</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;data/ArgData.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span>etm {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classetm_1_1_args.html">   19</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classetm_1_1_args.html">Args</a> {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">typedef</span> std::shared_ptr&lt;ArgData&gt; data_t;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">typedef</span> std::map&lt;std::string, data_t&gt; container_t;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        container_t args;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="comment">// Flagless parameters</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        std::vector&lt;std::string&gt; arrayArgs;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        std::string call;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classetm_1_1_args.html#ae6f24990c47c7dbd72373134a775912a">   36</a></span>&#160;        <a class="code" href="classetm_1_1_args.html#ae6f24990c47c7dbd72373134a775912a">Args</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">void</span> pushArg(<span class="keyword">const</span> std::string &amp;name, <span class="keyword">const</span> data_t &amp;data);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">void</span> setCall(<span class="keyword">const</span> std::string &amp;str);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">void</span> setArrayArgs(std::vector&lt;std::string&gt; &amp;&amp;args);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classetm_1_1_args.html#a039458d14b5fb52303f786fdee035c1a">   65</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classetm_1_1_args.html#a039458d14b5fb52303f786fdee035c1a">has</a>(<span class="keyword">const</span> std::string &amp;name);</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classetm_1_1_args.html#ae3b561a666ce356cd2b2da9b5b22d700">   73</a></span>&#160;        data_t <a class="code" href="classetm_1_1_args.html#ae3b561a666ce356cd2b2da9b5b22d700">get</a>(<span class="keyword">const</span> std::string &amp;name);</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classetm_1_1_args.html#af40a2f6dcdb04fd7efb5f07d618fc89a">   78</a></span>&#160;        std::string &amp;<a class="code" href="classetm_1_1_args.html#af40a2f6dcdb04fd7efb5f07d618fc89a">getCall</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classetm_1_1_args.html#a8c8a0422d6ae1aa737ecac93380850d7">   83</a></span>&#160;        std::vector&lt;std::string&gt; &amp;<a class="code" href="classetm_1_1_args.html#a8c8a0422d6ae1aa737ecac93380850d7">getArrayArgs</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    };</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassetm_1_1_args_html_a09502a444ee39eddc8671015b17ae84c"><div class="ttname"><a href="classetm_1_1_args.html#a09502a444ee39eddc8671015b17ae84c">etm::Args::setCall</a></div><div class="ttdeci">void setCall(const std::string &amp;str)</div><div class="ttdoc">Sets the alias that was used to invoke the command.</div></div>
 <div class="ttc" id="aclassetm_1_1_args_html_a039458d14b5fb52303f786fdee035c1a"><div class="ttname"><a href="classetm_1_1_args.html#a039458d14b5fb52303f786fdee035c1a">etm::Args::has</a></div><div class="ttdeci">bool has(const std::string &amp;name)</div><div class="ttdoc">Check if object has the given argument.</div></div>
-<div class="ttc" id="aclassetm_1_1_args_html_aa5cd529e3d3a7ec414b7efa9571d240e"><div class="ttname"><a href="classetm_1_1_args.html#aa5cd529e3d3a7ec414b7efa9571d240e">etm::Args::pushArg</a></div><div class="ttdeci">void pushArg(const std::string &amp;name, const data_t &amp;data)</div><div class="ttdoc">Adds a new argument.</div></div>
 <div class="ttc" id="aclassetm_1_1_args_html_ae6f24990c47c7dbd72373134a775912a"><div class="ttname"><a href="classetm_1_1_args.html#ae6f24990c47c7dbd72373134a775912a">etm::Args::Args</a></div><div class="ttdeci">Args()</div><div class="ttdoc">Construct an Args object.</div></div>
 <div class="ttc" id="aclassetm_1_1_args_html_af40a2f6dcdb04fd7efb5f07d618fc89a"><div class="ttname"><a href="classetm_1_1_args.html#af40a2f6dcdb04fd7efb5f07d618fc89a">etm::Args::getCall</a></div><div class="ttdeci">std::string &amp; getCall()</div><div class="ttdoc">Gets the alias that was used to invoke the command.</div></div>
+<div class="ttc" id="aclassetm_1_1_args_html_a8c8a0422d6ae1aa737ecac93380850d7"><div class="ttname"><a href="classetm_1_1_args.html#a8c8a0422d6ae1aa737ecac93380850d7">etm::Args::getArrayArgs</a></div><div class="ttdeci">std::vector&lt; std::string &gt; &amp; getArrayArgs()</div><div class="ttdoc">Gets the flagless parameters.</div></div>
 <div class="ttc" id="aclassetm_1_1_args_html_ae3b561a666ce356cd2b2da9b5b22d700"><div class="ttname"><a href="classetm_1_1_args.html#ae3b561a666ce356cd2b2da9b5b22d700">etm::Args::get</a></div><div class="ttdeci">data_t get(const std::string &amp;name)</div><div class="ttdoc">Get the given argument.</div></div>
-<div class="ttc" id="aclassetm_1_1_args_html"><div class="ttname"><a href="classetm_1_1_args.html">etm::Args</a></div><div class="ttdoc">Data class containing information about arguments passed to a command.</div><div class="ttdef"><b>Definition:</b> Args.h:18</div></div>
+<div class="ttc" id="aclassetm_1_1_args_html"><div class="ttname"><a href="classetm_1_1_args.html">etm::Args</a></div><div class="ttdoc">Data class containing information about arguments passed to a command.</div><div class="ttdef"><b>Definition:</b> Args.h:19</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 22 2020 15:46:02 for Etermal by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 26 2020 18:05:10 for Etermal by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.18
 </small></address>

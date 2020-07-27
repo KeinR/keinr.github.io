@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Etermal: Getting Started</title>
+<title>Etermal: Getting started</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,14 +63,179 @@ $(function() {
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Getting Started </div>  </div>
+<div class="title">Getting started </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"></div></div><!-- contents -->
+<div class="toc"><h3>Table of Contents</h3>
+<ul><li class="level1"><a href="#building_and_linking">Building and linking</a><ul><li class="level2"><a href="#building_and_linking_cmake">Installed with CMake</a></li>
+<li class="level2"><a href="#building_and_linking_manual">Manual package install</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#running">Running</a><ul><li class="level2"><a href="#basics">Basics</a></li>
+<li class="level2"><a href="#streaming">Streaming</a></li>
+<li class="level2"><a href="#beautifying_terminal_text">Beautifying terminal text</a></li>
+<li class="level2"><a href="#custom_commands">Adding custom commands to Shell</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="textblock"><h1><a class="anchor" id="building_and_linking"></a>
+Building and linking</h1>
+<p>First, <a class="el" href="building.html">build etermal</a>.</p>
+<h2><a class="anchor" id="building_and_linking_cmake"></a>
+Installed with CMake</h2>
+<p>Add the following to your <code>CMakeLists.txt</code>:</p>
+<div class="fragment"><div class="line">find_package(etermal REQUIRED)</div>
+<div class="line">find_package(Freetype REQUIRED)</div>
+<div class="line">target_link_libraries(yourTarget etermal)</div>
+</div><!-- fragment --><p>Yes, it linkes to freetype. Will see to adding bitmap fonts option.</p>
+<h2><a class="anchor" id="building_and_linking_manual"></a>
+Manual package install</h2>
+<p>Simply make sure that the include dir is in your include path and the library binary is in your linker path - and that you link to the binary.</p>
+<h1><a class="anchor" id="running"></a>
+Running</h1>
+<dl class="section note"><dt>Note</dt><dd>All the things explained below could also be inferred from reading the docs for the pertinent classes. </dd>
+<dd>
+Please also read the docs for <a class="el" href="classetm_1_1_terminal.html">terminal</a> and <a class="el" href="classetm_1_1_shell.html">shell</a>, this is all just a brief intoduction.</dd></dl>
+<h2><a class="anchor" id="basics"></a>
+Basics</h2>
+<p>To set everything up, you literally just have to do:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;etermal/etermal.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main() {</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// ... Set up the context etc etc ...</span></div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Create terminal and shell</span></div>
+<div class="line">    <a class="code" href="classetm_1_1_terminal.html">etm::Terminal</a> terminal;</div>
+<div class="line">    <a class="code" href="classetm_1_1_shell.html">etm::Shell</a> shell;</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// Link the two</span></div>
+<div class="line">    terminal.<a class="code" href="classetm_1_1_terminal.html#a67a7ff31b1ae7bbd091a2bddef1272c8">setShell</a>(shell);</div>
+<div class="line">    shell.<a class="code" href="classetm_1_1_shell.html#a2f46f3bdad0f7a95f48e5e59d3c34f64">setTerminal</a>(terminal);</div>
+<div class="line"> </div>
+<div class="line">    terminal.<a class="code" href="classetm_1_1_terminal.html#a16b59779e904a4862164ea0c2fbbac2f">dispText</a>(<span class="stringliteral">&quot;Is anyone there&quot;</span>);</div>
+<div class="line">    terminal.<a class="code" href="classetm_1_1_terminal.html#a060ae1b193c8b75061d0883d68dde2df">flush</a>();</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">while</span> (rendering) {</div>
+<div class="line">        <span class="comment">// ... Render stuff ...</span></div>
+<div class="line">        <span class="comment">// ... Make terminal context current ...</span></div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// Render terminal to framebuffer</span></div>
+<div class="line">        terminal.<a class="code" href="classetm_1_1_terminal.html#a047512fc8f05088e8446e4ec76e7c8d5">render</a>();</div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// ... Do other stuff ...</span></div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>If the terminal is created this way, its OpenGL resources will be tied to the current context. This is not always desired behavior, especially if there isn't even a context active!</dd></dl>
+<p>To fix that, you can instead do late initialization:</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;etermal/etermal.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line">...</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Create terminal early</span></div>
+<div class="line">etm::Terminal terminal(</div>
+<div class="line">    <span class="stringliteral">&quot;path/to/some/font.ttf&quot;</span>, <span class="comment">// Path to intial font (unrelated)</span></div>
+<div class="line">    <span class="keyword">true</span> <span class="comment">// Tell terminal to postpone initialization of OpenGL resources</span></div>
+<div class="line">);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// ... Set up and make current the desired context ...</span></div>
+<div class="line"> </div>
+<div class="line">terminal.<a class="code" href="classetm_1_1_terminal.html#a3864a4c9b766383edc7ec501abaa87a4">init</a>();</div>
+</div><!-- fragment --><p>You can also call <a class="el" href="classetm_1_1_terminal.html#a3864a4c9b766383edc7ec501abaa87a4">init</a> whenever you want to regenerate the terminal's resources in a different context.</p>
+<p>Of course, since Terminal is a little heavy, it might be better for you to dynamically allocate it with shared pointers... That's up to you, however.</p>
+<h2><a class="anchor" id="streaming"></a>
+Streaming</h2>
+<p>What's cool about terminal is that it extends std::streambuf, so you can create an std::ostream with it.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;etermal/etermal.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;ostream&gt;</span></div>
+<div class="line"> </div>
+<div class="line">...</div>
+<div class="line"> </div>
+<div class="line">etm::Terminal terminal;</div>
+<div class="line">std::ostream stream(&amp;terminal);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Write to terminal through stream</span></div>
+<div class="line">stream &lt;&lt; <span class="stringliteral">&quot;What&#39;s the answer? &quot;</span> &lt;&lt; std::flush;</div>
+<div class="line"><span class="comment">// Since it&#39;s a stream, will flush on newline</span></div>
+<div class="line"><span class="keywordtype">int</span> a = 42;</div>
+<div class="line">stream &lt;&lt; a &lt;&lt; <span class="stringliteral">&quot;!\n&quot;</span>;</div>
+<div class="line"><span class="comment">// NB: Terminal DOES NOT automatically flush otherwise.</span></div>
+<div class="line">terminal.<a class="code" href="classetm_1_1_terminal.html#a16b59779e904a4862164ea0c2fbbac2f">dispText</a>(<span class="stringliteral">&quot;\nWait, who&#39;s Rem?\n&quot;</span>);</div>
+<div class="line">terminal.<a class="code" href="classetm_1_1_terminal.html#a060ae1b193c8b75061d0883d68dde2df">flush</a>();</div>
+</div><!-- fragment --><h2><a class="anchor" id="beautifying_terminal_text"></a>
+Beautifying terminal text</h2>
+<p>See <a class="el" href="escape_sequences.html">the page on escape sequences</a>.</p>
+<h2><a class="anchor" id="custom_commands"></a>
+Adding custom commands to Shell</h2>
+<dl class="section note"><dt>Note</dt><dd>My Shell implementation really isn't the best - it's <a class="el" href="classetm_1_1_terminal.html">terminal</a> that really shines. Remember, you can always give your own custom implementation of the shell via <a class="el" href="classetm_1_1_e_shell.html">EShell</a>.</dd></dl>
+<p>Really quite straightforward.</p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;etermal/etermal.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line">...</div>
+<div class="line"> </div>
+<div class="line">etm::Shell shell;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Add a clear command</span></div>
+<div class="line"><span class="comment">// The argument filter</span></div>
+<div class="line"><a class="code" href="classetm_1_1_arg_filter.html">etm::ArgFilter</a> clearArgs;</div>
+<div class="line"><span class="comment">// Set the usage (printed when invalid arguments are given;</span></div>
+<div class="line"><span class="comment">// in this case, if any are)</span></div>
+<div class="line">clearArgs.<a class="code" href="classetm_1_1_arg_filter.html#a13db8b30434db1e86b6e467f3a295597">setUsage</a>(<span class="stringliteral">&quot;Usage: [clear|wipe] [no args]\nClears the screen&quot;</span>);</div>
+<div class="line"><span class="comment">// We don&#39;t want any flagless arguments.</span></div>
+<div class="line"><span class="comment">// A flagless argument would be &quot;main.cpp&quot; in &quot;[command] main.cpp&quot;,</span></div>
+<div class="line"><span class="comment">// whereas a flag&#39;d argument would be the same in &quot;[command] -source main.cpp&quot;</span></div>
+<div class="line">clearArgs.<a class="code" href="classetm_1_1_arg_filter.html#a683431127aed33c38293df7700233a19">setMaxArrayArgs</a>(0);</div>
+<div class="line">shell.<a class="code" href="classetm_1_1_shell.html#a2dd7554e07f9a1bb283d8549e5b611c4">addCommand</a>(</div>
+<div class="line">    <span class="stringliteral">&quot;clear&quot;</span> <span class="comment">// The initial alias</span></div>
+<div class="line">    clearArgs, <span class="comment">// The argument filter</span></div>
+<div class="line">    [](<a class="code" href="classetm_1_1_shell.html">etm::Shell</a> &amp;shell, <a class="code" href="classetm_1_1_e_terminal.html">etm::ETerminal</a> &amp;terminal, <a class="code" href="classetm_1_1_args.html">etm::Args</a> &amp;args)-&gt;<span class="keywordtype">void</span>{ <span class="comment">// std::function to execute</span></div>
+<div class="line">        terminal.<a class="code" href="classetm_1_1_e_terminal.html#a99448b505bd31e825d604231ec461c63">clear</a>();</div>
+<div class="line">    }</div>
+<div class="line">);</div>
+<div class="line"><span class="comment">// Alias the last added command</span></div>
+<div class="line">shell.<a class="code" href="classetm_1_1_shell.html#af58ed1183179bf2cb58bed8758394137">alias</a>(<span class="stringliteral">&quot;wipe&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Add a command that argues with you</span></div>
+<div class="line"><span class="comment">// The argument filter</span></div>
+<div class="line"><a class="code" href="classetm_1_1_arg_filter.html">etm::ArgFilter</a> argArgs;</div>
+<div class="line"><span class="comment">// Take a few</span></div>
+<div class="line">argArgs.<a class="code" href="classetm_1_1_arg_filter.html#a683431127aed33c38293df7700233a19">setMaxArrayArgs</a>(100);</div>
+<div class="line">argArgs.<a class="code" href="classetm_1_1_arg_filter.html#a13db8b30434db1e86b6e467f3a295597">setUsage</a>(<span class="stringliteral">&quot;Usage: arg [arg]\nClears the screen&quot;</span>);</div>
+<div class="line">shell.<a class="code" href="classetm_1_1_shell.html#a2dd7554e07f9a1bb283d8549e5b611c4">addCommand</a>(</div>
+<div class="line">    <span class="stringliteral">&quot;arg&quot;</span> <span class="comment">// The initial alias</span></div>
+<div class="line">    argArgs, <span class="comment">// The argument filter</span></div>
+<div class="line">    [](<a class="code" href="classetm_1_1_shell.html">etm::Shell</a> &amp;shell, <a class="code" href="classetm_1_1_e_terminal.html">etm::ETerminal</a> &amp;terminal, <a class="code" href="classetm_1_1_args.html">etm::Args</a> &amp;args)-&gt;<span class="keywordtype">void</span>{ <span class="comment">// std::function to execute</span></div>
+<div class="line">        <span class="keywordflow">for</span> (std::string &amp;str : args.<a class="code" href="classetm_1_1_args.html#a8c8a0422d6ae1aa737ecac93380850d7">getArrayArgs</a>()) {</div>
+<div class="line">            terminal.dispText(<span class="stringliteral">&quot;\&quot;&quot;</span> + str + <span class="stringliteral">&quot;\&quot; is a stupid argument!\n&quot;</span>);</div>
+<div class="line">            terminal.flush();</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">);</div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
+<div class="ttc" id="aclassetm_1_1_terminal_html_a047512fc8f05088e8446e4ec76e7c8d5"><div class="ttname"><a href="classetm_1_1_terminal.html#a047512fc8f05088e8446e4ec76e7c8d5">etm::Terminal::render</a></div><div class="ttdeci">void render()</div><div class="ttdoc">Renders the terminal to the current framebuffer.</div></div>
+<div class="ttc" id="aclassetm_1_1_e_terminal_html"><div class="ttname"><a href="classetm_1_1_e_terminal.html">etm::ETerminal</a></div><div class="ttdoc">Base interface for an Etermal frontend.</div><div class="ttdef"><b>Definition:</b> ETerminal.h:16</div></div>
+<div class="ttc" id="aclassetm_1_1_arg_filter_html_a683431127aed33c38293df7700233a19"><div class="ttname"><a href="classetm_1_1_arg_filter.html#a683431127aed33c38293df7700233a19">etm::ArgFilter::setMaxArrayArgs</a></div><div class="ttdeci">void setMaxArrayArgs(unsigned int count)</div><div class="ttdoc">Sets the maximum number of flagless parameters that can be passed.</div></div>
+<div class="ttc" id="aclassetm_1_1_terminal_html_a3864a4c9b766383edc7ec501abaa87a4"><div class="ttname"><a href="classetm_1_1_terminal.html#a3864a4c9b766383edc7ec501abaa87a4">etm::Terminal::init</a></div><div class="ttdeci">void init()</div><div class="ttdoc">Initialize the terminal's openGL context resources.</div></div>
+<div class="ttc" id="aclassetm_1_1_arg_filter_html_a13db8b30434db1e86b6e467f3a295597"><div class="ttname"><a href="classetm_1_1_arg_filter.html#a13db8b30434db1e86b6e467f3a295597">etm::ArgFilter::setUsage</a></div><div class="ttdeci">void setUsage(const std::string &amp;usage)</div><div class="ttdoc">Sets the string that is printed when the filter fails to parse arguments.</div></div>
+<div class="ttc" id="aclassetm_1_1_shell_html_a2dd7554e07f9a1bb283d8549e5b611c4"><div class="ttname"><a href="classetm_1_1_shell.html#a2dd7554e07f9a1bb283d8549e5b611c4">etm::Shell::addCommand</a></div><div class="ttdeci">comid_t addCommand(const std::string &amp;name, const ArgFilter &amp;filter, const callback_t &amp;callback)</div><div class="ttdoc">Add a new command to the Shell.</div></div>
+<div class="ttc" id="aclassetm_1_1_shell_html_af58ed1183179bf2cb58bed8758394137"><div class="ttname"><a href="classetm_1_1_shell.html#af58ed1183179bf2cb58bed8758394137">etm::Shell::alias</a></div><div class="ttdeci">void alias(comid_t id, const std::string &amp;name)</div><div class="ttdoc">Associate another name with the given command.</div></div>
+<div class="ttc" id="aclassetm_1_1_terminal_html_a16b59779e904a4862164ea0c2fbbac2f"><div class="ttname"><a href="classetm_1_1_terminal.html#a16b59779e904a4862164ea0c2fbbac2f">etm::Terminal::dispText</a></div><div class="ttdeci">void dispText(const std::string &amp;str) override</div><div class="ttdoc">Append text to the display buffer.</div></div>
+<div class="ttc" id="aclassetm_1_1_arg_filter_html"><div class="ttname"><a href="classetm_1_1_arg_filter.html">etm::ArgFilter</a></div><div class="ttdoc">Used to process - or filter, if you will - command arguments.</div><div class="ttdef"><b>Definition:</b> ArgFilter.h:18</div></div>
+<div class="ttc" id="aclassetm_1_1_terminal_html_a060ae1b193c8b75061d0883d68dde2df"><div class="ttname"><a href="classetm_1_1_terminal.html#a060ae1b193c8b75061d0883d68dde2df">etm::Terminal::flush</a></div><div class="ttdeci">void flush() override</div><div class="ttdoc">Pushes the display buffer to the display.</div></div>
+<div class="ttc" id="aclassetm_1_1_e_terminal_html_a99448b505bd31e825d604231ec461c63"><div class="ttname"><a href="classetm_1_1_e_terminal.html#a99448b505bd31e825d604231ec461c63">etm::ETerminal::clear</a></div><div class="ttdeci">virtual void clear()=0</div><div class="ttdoc">Clears the screen.</div></div>
+<div class="ttc" id="aclassetm_1_1_terminal_html"><div class="ttname"><a href="classetm_1_1_terminal.html">etm::Terminal</a></div><div class="ttdoc">Build-in implementation of the ETerminal frontend.</div><div class="ttdef"><b>Definition:</b> Terminal.h:34</div></div>
+<div class="ttc" id="aclassetm_1_1_terminal_html_a67a7ff31b1ae7bbd091a2bddef1272c8"><div class="ttname"><a href="classetm_1_1_terminal.html#a67a7ff31b1ae7bbd091a2bddef1272c8">etm::Terminal::setShell</a></div><div class="ttdeci">void setShell(EShell &amp;shell)</div><div class="ttdoc">Sets the shell to which user input should be directed.</div></div>
+<div class="ttc" id="aclassetm_1_1_args_html_a8c8a0422d6ae1aa737ecac93380850d7"><div class="ttname"><a href="classetm_1_1_args.html#a8c8a0422d6ae1aa737ecac93380850d7">etm::Args::getArrayArgs</a></div><div class="ttdeci">std::vector&lt; std::string &gt; &amp; getArrayArgs()</div><div class="ttdoc">Gets the flagless parameters.</div></div>
+<div class="ttc" id="aclassetm_1_1_shell_html"><div class="ttname"><a href="classetm_1_1_shell.html">etm::Shell</a></div><div class="ttdoc">Built in implementation of EShell.</div><div class="ttdef"><b>Definition:</b> Shell.h:26</div></div>
+<div class="ttc" id="aclassetm_1_1_shell_html_a2f46f3bdad0f7a95f48e5e59d3c34f64"><div class="ttname"><a href="classetm_1_1_shell.html#a2f46f3bdad0f7a95f48e5e59d3c34f64">etm::Shell::setTerminal</a></div><div class="ttdeci">void setTerminal(ETerminal &amp;terminal)</div><div class="ttdoc">Set the program frontend.</div></div>
+<div class="ttc" id="aclassetm_1_1_args_html"><div class="ttname"><a href="classetm_1_1_args.html">etm::Args</a></div><div class="ttdoc">Data class containing information about arguments passed to a command.</div><div class="ttdef"><b>Definition:</b> Args.h:19</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 22 2020 15:46:03 for Etermal by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 26 2020 18:05:10 for Etermal by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.18
 </small></address>
