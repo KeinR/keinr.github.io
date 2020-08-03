@@ -105,12 +105,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a259c480aee99990b4002805c8f7be07b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_e_terminal.html#a259c480aee99990b4002805c8f7be07b">clearInputRequests</a> ()=0</td></tr>
 <tr class="memdesc:a259c480aee99990b4002805c8f7be07b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes all input requests.  <a href="classetm_1_1_e_terminal.html#a259c480aee99990b4002805c8f7be07b">More...</a><br /></td></tr>
 <tr class="separator:a259c480aee99990b4002805c8f7be07b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a173e96171da82031fdc91c3cb8fc3318"><td class="memItemLeft" align="right" valign="top"><a id="a173e96171da82031fdc91c3cb8fc3318"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_e_terminal.html#a173e96171da82031fdc91c3cb8fc3318">clearInput</a> ()=0</td></tr>
+<tr class="memdesc:a173e96171da82031fdc91c3cb8fc3318"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the input area (the area after the cursor lock). <br /></td></tr>
+<tr class="separator:a173e96171da82031fdc91c3cb8fc3318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97f15aacbb2aba6a1e157a69e1c9fd3f"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_e_terminal.html#a97f15aacbb2aba6a1e157a69e1c9fd3f">pollInput</a> ()=0</td></tr>
+<tr class="memdesc:a97f15aacbb2aba6a1e157a69e1c9fd3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current input text.  <a href="classetm_1_1_e_terminal.html#a97f15aacbb2aba6a1e157a69e1c9fd3f">More...</a><br /></td></tr>
+<tr class="separator:a97f15aacbb2aba6a1e157a69e1c9fd3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d18cfe25419274be92fee91a9d244f3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_e_terminal.html#a6d18cfe25419274be92fee91a9d244f3">dispText</a> (const std::string &amp;str)=0</td></tr>
 <tr class="memdesc:a6d18cfe25419274be92fee91a9d244f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append text to the display buffer.  <a href="classetm_1_1_e_terminal.html#a6d18cfe25419274be92fee91a9d244f3">More...</a><br /></td></tr>
 <tr class="separator:a6d18cfe25419274be92fee91a9d244f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ae56e3da42f6b28c330f1a6125e621c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_e_terminal.html#a3ae56e3da42f6b28c330f1a6125e621c">flush</a> ()=0</td></tr>
 <tr class="memdesc:a3ae56e3da42f6b28c330f1a6125e621c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes the display buffer to the display.  <a href="classetm_1_1_e_terminal.html#a3ae56e3da42f6b28c330f1a6125e621c">More...</a><br /></td></tr>
 <tr class="separator:a3ae56e3da42f6b28c330f1a6125e621c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58d35061cc554fd37bb464b76b600f90"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_e_terminal.html#a58d35061cc554fd37bb464b76b600f90">softFlush</a> ()=0</td></tr>
+<tr class="memdesc:a58d35061cc554fd37bb464b76b600f90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes the display buffer to the display.  <a href="classetm_1_1_e_terminal.html#a58d35061cc554fd37bb464b76b600f90">More...</a><br /></td></tr>
+<tr class="separator:a58d35061cc554fd37bb464b76b600f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base interface for an Etermal frontend. </p>
@@ -281,9 +291,41 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Pushes the display buffer to the display. </p>
+<dl class="section note"><dt>Note</dt><dd>Pushes the cursor with it. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classetm_1_1_e_terminal.html#a6d18cfe25419274be92fee91a9d244f3" title="Append text to the display buffer.">dispText(const std::string &amp;str)</a> </dd></dl>
 
 <p>Implemented in <a class="el" href="classetm_1_1_terminal.html#a060ae1b193c8b75061d0883d68dde2df">etm::Terminal</a>.</p>
+
+</div>
+</div>
+<a id="a97f15aacbb2aba6a1e157a69e1c9fd3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97f15aacbb2aba6a1e157a69e1c9fd3f">&#9670;&nbsp;</a></span>pollInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string etm::ETerminal::pollInput </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the current input text. </p>
+<dl class="section note"><dt>Note</dt><dd>This is only a get operation. Nothing is changed as a result of this call. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The input text, UTF-8 encoded </dd></dl>
+
+<p>Implemented in <a class="el" href="classetm_1_1_terminal.html#a992ecb483cad21da512bfae235e34874">etm::Terminal</a>.</p>
 
 </div>
 </div>
@@ -363,13 +405,43 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a58d35061cc554fd37bb464b76b600f90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58d35061cc554fd37bb464b76b600f90">&#9670;&nbsp;</a></span>softFlush()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void etm::ETerminal::softFlush </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pushes the display buffer to the display. </p>
+<p>Unlike <a class="el" href="classetm_1_1_e_terminal.html#a3ae56e3da42f6b28c330f1a6125e621c">flush()</a>, does not move the cursor. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classetm_1_1_e_terminal.html#a6d18cfe25419274be92fee91a9d244f3" title="Append text to the display buffer.">dispText(const std::string &amp;str)</a> </dd></dl>
+
+<p>Implemented in <a class="el" href="classetm_1_1_terminal.html#a33a75125c714dd9921f885c757d3159b">etm::Terminal</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_e_terminal_8h_source.html">ETerminal.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 27 2020 11:29:05 for Etermal by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Aug 2 2020 21:45:46 for Etermal by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.18
 </small></address>

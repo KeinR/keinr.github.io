@@ -67,6 +67,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>Etermal uses CMake. If you don't use it, I suggest you switch to it; honestly, it's made my life so much easier.</p>
+<dl class="section note"><dt>Note</dt><dd>Client applications have the choice of using bitmap fonts or vector fonts. If only using bitmap fonts, there is no need to link against freetype. Despite this, you still need to build with freetype, as the installation would be incomplete without it.</dd></dl>
 <h1><a class="anchor" id="Options"></a>
 Options</h1>
 <p>In generating the build files (via <code>cmake ...</code>), you can specify the following options:</p>
@@ -77,6 +78,12 @@ Options</h1>
 <td class="markdownTableBodyNone">DEV </td><td class="markdownTableBodyNone">OFF </td><td class="markdownTableBodyNone">If the library should be build with debug symbols  </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">MAKE_DOCS </td><td class="markdownTableBodyNone">OFF </td><td class="markdownTableBodyNone">If the <code>docs</code> target should be created, to build the documentation (requires doxygen)  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">EXAMPLES </td><td class="markdownTableBodyNone">OFF </td><td class="markdownTableBodyNone">If the <code>examples</code> target should be created, to build the example applications (requires glfw)  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">TESTS </td><td class="markdownTableBodyNone">OFF </td><td class="markdownTableBodyNone">If the <code>tests</code> target should be created, to build the tests (requires glfw)  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">BUILD_PRIVATE_DOCS </td><td class="markdownTableBodyNone">OFF </td><td class="markdownTableBodyNone">If <code>MAKE_DOCS</code> is turned on, the <code>docs</code> target will generate documentation for the entire codebase (as opposed to just the public interface)  </td></tr>
 </table>
 <h1><a class="anchor" id="Targets"></a>
 Targets</h1>
@@ -92,12 +99,16 @@ Targets</h1>
 <td class="markdownTableBodyNone">package </td><td class="markdownTableBodyNone">Creates a zipped file with the files installed by <code>install</code>  </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">docs </td><td class="markdownTableBodyNone">If <code>MAKE_DOCS</code> was turned on, generates the documentation  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">examples </td><td class="markdownTableBodyNone">If <code>EXAMPLES</code> was turned on, builds the examples  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">tests </td><td class="markdownTableBodyNone">If <code>TESTS</code> was turned on, builds the tests  </td></tr>
 </table>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 27 2020 11:29:05 for Etermal by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Aug 2 2020 21:45:45 for Etermal by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.18
 </small></address>

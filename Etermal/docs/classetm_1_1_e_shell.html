@@ -84,7 +84,8 @@ Inheritance diagram for etm::EShell:</div>
  <div class="center">
   <img src="classetm_1_1_e_shell.png" usemap="#etm::EShell_map" alt=""/>
   <map id="etm::EShell_map" name="etm::EShell_map">
-<area href="classetm_1_1_shell.html" title="Built in implementation of EShell." alt="etm::Shell" shape="rect" coords="0,56,73,80"/>
+<area href="classetm_1_1_basic_shell.html" title="Built in implementation of EShell." alt="etm::BasicShell" shape="rect" coords="0,56,96,80"/>
+<area href="classetm_1_1_shell.html" title="Built in implementation of EShell." alt="etm::Shell" shape="rect" coords="106,56,202,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -93,6 +94,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a19077279034106a0084742ae4680812b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_e_shell.html#a19077279034106a0084742ae4680812b">input</a> (const std::string &amp;commandString)=0</td></tr>
 <tr class="memdesc:a19077279034106a0084742ae4680812b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a command string to the shell to be processed.  <a href="classetm_1_1_e_shell.html#a19077279034106a0084742ae4680812b">More...</a><br /></td></tr>
 <tr class="separator:a19077279034106a0084742ae4680812b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c7146d57c407a64d65f9130b46a7d3f"><td class="memItemLeft" align="right" valign="top"><a id="a7c7146d57c407a64d65f9130b46a7d3f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_e_shell.html#a7c7146d57c407a64d65f9130b46a7d3f">cursorUp</a> ()=0</td></tr>
+<tr class="memdesc:a7c7146d57c407a64d65f9130b46a7d3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the user attempts to move the cursor <em>up</em> when it's already at max height; think command history... <br /></td></tr>
+<tr class="separator:a7c7146d57c407a64d65f9130b46a7d3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49f7eff1249a8ebcea50fdb7a9a6e4a8"><td class="memItemLeft" align="right" valign="top"><a id="a49f7eff1249a8ebcea50fdb7a9a6e4a8"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_e_shell.html#a49f7eff1249a8ebcea50fdb7a9a6e4a8">cursorDown</a> ()=0</td></tr>
+<tr class="memdesc:a49f7eff1249a8ebcea50fdb7a9a6e4a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the user attempts to move the cursor <em>down</em> when it's already at max height; think command history... <br /></td></tr>
+<tr class="separator:a49f7eff1249a8ebcea50fdb7a9a6e4a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base interface for an Etermal backend. </p>
@@ -132,7 +141,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classetm_1_1_shell.html#a80aa9ba1b21266df87225e478be953b0">etm::Shell</a>.</p>
+<p>Implemented in <a class="el" href="classetm_1_1_shell.html#a80aa9ba1b21266df87225e478be953b0">etm::Shell</a>, and <a class="el" href="classetm_1_1_basic_shell.html#ada9aa7a1f9328a596a5b0217e6c70b95">etm::BasicShell</a>.</p>
 
 </div>
 </div>
@@ -142,7 +151,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 27 2020 11:29:05 for Etermal by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Aug 2 2020 21:45:46 for Etermal by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.18
 </small></address>

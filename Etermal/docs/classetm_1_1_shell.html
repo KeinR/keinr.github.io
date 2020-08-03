@@ -132,9 +132,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad9199abf16ec19eb32aa22621951ca0f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_shell.html#ad9199abf16ec19eb32aa22621951ca0f">Shell</a> (const <a class="el" href="classetm_1_1_shell.html#a29751874f439be8a6e698f80a8f8fe55">errCallback_t</a> &amp;callback)</td></tr>
 <tr class="memdesc:ad9199abf16ec19eb32aa22621951ca0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a shell with an error callback.  <a href="classetm_1_1_shell.html#ad9199abf16ec19eb32aa22621951ca0f">More...</a><br /></td></tr>
 <tr class="separator:ad9199abf16ec19eb32aa22621951ca0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5c6997eb86c041747615704efc45e1d"><td class="memItemLeft" align="right" valign="top"><a id="ad5c6997eb86c041747615704efc45e1d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Shell</b> (<a class="el" href="classetm_1_1_shell.html">Shell</a> &amp;&amp;other)=delete</td></tr>
-<tr class="separator:ad5c6997eb86c041747615704efc45e1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9044581f0b62bde67a57b3af37fb511"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_shell.html#ac9044581f0b62bde67a57b3af37fb511">setErrorCallback</a> (const <a class="el" href="classetm_1_1_shell.html#a29751874f439be8a6e698f80a8f8fe55">errCallback_t</a> &amp;callback)</td></tr>
 <tr class="memdesc:ac9044581f0b62bde67a57b3af37fb511"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the callback that will be called whenever a <code><a class="el" href="classetm_1_1shell_error.html" title="Describes an error that occurred in the Shell.">shellError</a></code> is set.  <a href="classetm_1_1_shell.html#ac9044581f0b62bde67a57b3af37fb511">More...</a><br /></td></tr>
 <tr class="separator:ac9044581f0b62bde67a57b3af37fb511"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,6 +159,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a80aa9ba1b21266df87225e478be953b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_shell.html#a80aa9ba1b21266df87225e478be953b0">input</a> (const std::string &amp;commandString) override</td></tr>
 <tr class="memdesc:a80aa9ba1b21266df87225e478be953b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a command string to the shell to be processed.  <a href="classetm_1_1_shell.html#a80aa9ba1b21266df87225e478be953b0">More...</a><br /></td></tr>
 <tr class="separator:a80aa9ba1b21266df87225e478be953b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7843c3c763cb87022f8e99688dd354f0"><td class="memItemLeft" align="right" valign="top"><a id="a7843c3c763cb87022f8e99688dd354f0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_shell.html#a7843c3c763cb87022f8e99688dd354f0">cursorUp</a> () override</td></tr>
+<tr class="memdesc:a7843c3c763cb87022f8e99688dd354f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the user attempts to move the cursor <em>up</em> when it's already at max height; think command history... <br /></td></tr>
+<tr class="separator:a7843c3c763cb87022f8e99688dd354f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe4c9ba427d2853baf13503054b6cde2"><td class="memItemLeft" align="right" valign="top"><a id="afe4c9ba427d2853baf13503054b6cde2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_shell.html#afe4c9ba427d2853baf13503054b6cde2">cursorDown</a> () override</td></tr>
+<tr class="memdesc:afe4c9ba427d2853baf13503054b6cde2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the user attempts to move the cursor <em>down</em> when it's already at max height; think command history... <br /></td></tr>
+<tr class="separator:afe4c9ba427d2853baf13503054b6cde2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2dd7554e07f9a1bb283d8549e5b611c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classetm_1_1_shell.html#abaa200dea2d52d0a68cf0d67b5059c74">comid_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classetm_1_1_shell.html#a2dd7554e07f9a1bb283d8549e5b611c4">addCommand</a> (const std::string &amp;name, const <a class="el" href="classetm_1_1_arg_filter.html">ArgFilter</a> &amp;filter, const <a class="el" href="classetm_1_1_shell.html#a03cd581c8722902dba97cad12d6abba0">callback_t</a> &amp;callback)</td></tr>
 <tr class="memdesc:a2dd7554e07f9a1bb283d8549e5b611c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new command to the <a class="el" href="classetm_1_1_shell.html" title="Built in implementation of EShell.">Shell</a>.  <a href="classetm_1_1_shell.html#a2dd7554e07f9a1bb283d8549e5b611c4">More...</a><br /></td></tr>
 <tr class="separator:a2dd7554e07f9a1bb283d8549e5b611c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -671,7 +676,7 @@ If <code>name</code> already exists as an alias to some other command, that alia
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 27 2020 11:29:05 for Etermal by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Aug 2 2020 21:45:46 for Etermal by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.18
 </small></address>

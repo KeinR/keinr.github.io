@@ -82,16 +82,21 @@ $(function() {
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="classetm_1_1_e_shell.html">EShell</a>() = 0;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classetm_1_1_e_shell.html#a19077279034106a0084742ae4680812b">   23</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classetm_1_1_e_shell.html#a19077279034106a0084742ae4680812b">input</a>(<span class="keyword">const</span> std::string &amp;commandString) = 0;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    };</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classetm_1_1_e_shell.html#a7c7146d57c407a64d65f9130b46a7d3f">   30</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classetm_1_1_e_shell.html#a7c7146d57c407a64d65f9130b46a7d3f">cursorUp</a>() = 0;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classetm_1_1_e_shell.html#a49f7eff1249a8ebcea50fdb7a9a6e4a8">   36</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classetm_1_1_e_shell.html#a49f7eff1249a8ebcea50fdb7a9a6e4a8">cursorDown</a>() = 0;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    };</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassetm_1_1_e_shell_html_a7c7146d57c407a64d65f9130b46a7d3f"><div class="ttname"><a href="classetm_1_1_e_shell.html#a7c7146d57c407a64d65f9130b46a7d3f">etm::EShell::cursorUp</a></div><div class="ttdeci">virtual void cursorUp()=0</div><div class="ttdoc">Called when the user attempts to move the cursor up when it's already at max height; think command hi...</div></div>
 <div class="ttc" id="aclassetm_1_1_e_shell_html_a19077279034106a0084742ae4680812b"><div class="ttname"><a href="classetm_1_1_e_shell.html#a19077279034106a0084742ae4680812b">etm::EShell::input</a></div><div class="ttdeci">virtual void input(const std::string &amp;commandString)=0</div><div class="ttdoc">Send a command string to the shell to be processed.</div></div>
+<div class="ttc" id="aclassetm_1_1_e_shell_html_a49f7eff1249a8ebcea50fdb7a9a6e4a8"><div class="ttname"><a href="classetm_1_1_e_shell.html#a49f7eff1249a8ebcea50fdb7a9a6e4a8">etm::EShell::cursorDown</a></div><div class="ttdeci">virtual void cursorDown()=0</div><div class="ttdoc">Called when the user attempts to move the cursor down when it's already at max height; think command ...</div></div>
 <div class="ttc" id="aclassetm_1_1_e_shell_html"><div class="ttname"><a href="classetm_1_1_e_shell.html">etm::EShell</a></div><div class="ttdoc">Base interface for an Etermal backend.</div><div class="ttdef"><b>Definition:</b> EShell.h:14</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 27 2020 11:29:05 for Etermal by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Aug 2 2020 21:45:45 for Etermal by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.18
 </small></address>
